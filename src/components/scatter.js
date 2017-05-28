@@ -65,7 +65,6 @@ class Scatter extends React.Component {
         this.fetchData()
         this.draw()
         this.autorangeChart()
-
     }
    
     render() {

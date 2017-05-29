@@ -1,20 +1,19 @@
 html, body {
     background-color: #eaf0f5;
-    width: 100%;
-    height: auto;
-}
-.container {
-    background-color: #eaf0f5;
-    font-family: 'Questrial', sans-serif;
-    margin: 10px;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
-.card {
+.container-fluid {
+    background-color: #eaf0f5;    
+    font-family: 'Questrial', sans-serif;
+    margin: 10px;
+}
+
+/*.card {
     margin-top: 5px;
     margin-bottom: 5px;
-}
+}*/
 
 /*.card {
  overflow: hidden;

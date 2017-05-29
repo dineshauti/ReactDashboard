@@ -7,15 +7,40 @@ import PieChart from './components/pieChart'
 
 // Create a component. This component should produce some HTML
 class App extends React.Component {
+
+    state = {
+        temperature: '',
+        timeStamp: ''
+    }
     
     render() {
         return (
-            <div className="parent_container">
+            <div className="container">
+                <div className="card-deck">
+                    <div className="card card-success text-center mb-3">
+                        <div className="card-block">
+                            <p className="card-text display-1">29</p>
+                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div className="card card-warning text-center mb-3">
+                        <div className="card-block">
+                            <p className="card-text display-1">54</p>
+                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div className="card card-info text-center mb-3">
+                        <div className="card-block">
+                            <p className="card-text display-1">10</p>
+                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-sm-6">
-                        <div className="card">
+                        <div className="card mb-3">
                             <div className="card-header">
-                                Bar Plot
+                                Predictions
                             </div>
                             <div className="card-block">
                                 <div id="barchart"><BarChart /></div>
@@ -23,7 +48,7 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div className="col-sm-6">
-                        <div className="card">
+                        <div className="card mb-3">
                             <div className="card-header">
                                 Pie Chart
                             </div>
@@ -34,18 +59,19 @@ class App extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-sm-8">
-                        <div className="card">
+                    <div className="col-sm-12">
+                        <div className="card mb-3">
                             <div className="card-header">
-                                Scatter Plot
+                                Max Traffic
                             </div>
                             <div className="card-block">
-                                <div id="scatter"><Scatter /></div>
+                                <div id="scatter">
+                                    <Scatter />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
+                </div>                
             </div>       
     )
     }
@@ -53,4 +79,4 @@ class App extends React.Component {
 }
 
 //Take this components generated HTML and put it on the page (in the DOM)
-ReactDOM.render(<App />, document.querySelector('.container'))
+ReactDOM.render(<App />, document.querySelector('.container-fluid'))

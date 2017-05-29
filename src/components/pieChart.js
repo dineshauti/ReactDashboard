@@ -1,5 +1,5 @@
-/* global Plotly */
-import React from 'react'   
+import React from 'react'
+import Plotly from 'plotly.js'   
 
 class PieChart extends React.Component {
 

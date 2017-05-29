@@ -1,5 +1,5 @@
-/* global Plotly */
 import React from 'react'
+import Plotly from 'plotly.js'
 import axios from 'axios'
 
 var temperature = []
@@ -21,7 +21,7 @@ class Scatter extends React.Component {
                 var body = response.data
 
                 for (var i = 0; i < body.length; i++) {
-                    temperature.push(parseFloat(body[i].temperature));
+                    temperature.push(parseFloat(body[i].temperature));  
                     timeStamp.push(body[i].timeStamp);
                 }
 
@@ -35,7 +35,7 @@ class Scatter extends React.Component {
 
     }
 
-    draw = () => {
+    draw = () => {       
 
         console.log(temperature)
         console.log(timeStamp)
@@ -52,30 +52,27 @@ class Scatter extends React.Component {
         var layout = {
             height: 400, 
             xaxis: {
-                title: 'Time',
-                
+                title: 'Time',                
             },
             yaxis: {
-                title: 'Temperature(Celcius)',
-                
+                title: 'Number of people',                
             }      
         };
 
         Plotly.newPlot('scatter', data, layout, {displaylogo: false});
+
+
 
     }
 
     componentDidMount() {
         this.fetchData()
         this.draw()
-        //window.addEventListener('load', this.handleLoad);
     }
 
     componentDidUpdate() {
-        this.draw()
-         //window.addEventListener('load', this.handleLoad);
+        this.draw()        
     }
-
    
     render() {
         

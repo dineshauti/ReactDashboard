@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Scatter from './components/scatter'
 import BarChart from './components/barChart'
 import PieChart from './components/pieChart'
-import Demo from './components/demo'
+
 
 // Create a component. This component should produce some HTML
 class App extends React.Component {

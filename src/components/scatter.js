@@ -8,19 +8,27 @@ var timeStamp = []
 class Scatter extends React.Component {
 
     fetchData = () => {
-        var url = 'http://localhost:8000/data'
+        var url = 'https://ifarm-uncc.mybluemix.net/data'
         var config  = {
             headers: {'Access-Control-Allow-Origin' : '*'}
         }
 
+        var self = this
+
         axios.get(url, config)
             .then(function(response){
+
                 var body = response.data
 
                 for (var i = 0; i < body.length; i++) {
                     temperature.push(parseFloat(body[i].temperature));
-                    timeStamp.push(parseFloat(body[i].timeStamp));
-                } 
+                    timeStamp.push(body[i].timeStamp);
+                }
+
+                self.setState({
+                    temperature: temperature,
+                    timeStamp: timeStamp
+                }) 
             });
 
         
@@ -42,30 +50,32 @@ class Scatter extends React.Component {
         var data = [trace1];
 
         var layout = {
-            title:'Scatter Plot',
-            height: 400,
-            margin: {
-                t:0, r:0, l:30
-            }            
-            
+            height: 400, 
+            xaxis: {
+                title: 'Time',
+                
+            },
+            yaxis: {
+                title: 'Temperature(Celcius)',
+                
+            }      
         };
 
         Plotly.newPlot('scatter', data, layout, {displaylogo: false});
 
     }
 
-     autorangeChart() {
-        Plotly.relayout('scatter', {
-            'xaxis.autorange': true,
-            'yaxis.autorange': true
-        });
-    }
-
     componentDidMount() {
         this.fetchData()
         this.draw()
-        this.autorangeChart()
+        //window.addEventListener('load', this.handleLoad);
     }
+
+    componentDidUpdate() {
+        this.draw()
+         //window.addEventListener('load', this.handleLoad);
+    }
+
    
     render() {
         

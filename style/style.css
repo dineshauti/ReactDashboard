@@ -1,6 +1,14 @@
+html, body {
+    background-color: #eaf0f5;
+    width: 100%;
+    height: auto;
+}
 .container {
-    background-color: #effffd;
+    background-color: #eaf0f5;
+    font-family: 'Questrial', sans-serif;
     margin: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .card {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Scatter from './components/scatter'
 import BarChart from './components/barChart'
 import PieChart from './components/pieChart'
-import StatusCard from './components/statusCard'
+import CardWrapper from './components/cardWrapper'
 
 
 
@@ -18,7 +18,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <StatusCard />
+                <CardWrapper />
                 <div className="row">
                     <div className="col-sm-6">
                         <div className="card mb-3">

@@ -64,8 +64,6 @@ class Scatter extends React.Component {
 
         Plotly.newPlot('scatter', data, layout, {displaylogo: false});
 
-
-
     }
 
     componentDidMount() {

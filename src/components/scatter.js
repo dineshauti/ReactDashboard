@@ -43,8 +43,11 @@ class Scatter extends React.Component {
         var trace1 = {
             x: timeStamp, 
             y: temperature,
-            type: 'scatter'
-            //mode: 'markers'
+            mode: 'lines+markers',
+            marker: {
+                size: 12,
+                opacity: 0.5
+            }
         };
 
         var data = [trace1];

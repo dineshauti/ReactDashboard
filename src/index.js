@@ -19,20 +19,23 @@ class App extends React.Component {
                 <div className="card-deck">
                     <div className="card card-success text-center mb-3">
                         <div className="card-block">
-                            <p className="card-text display-1">29</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <p className="display-1">29</p>
+                            <p className="card-text">New accounts opened</p>
+                            <p className="card-text"><small className="text-muted">Last updated 1 mins ago</small></p> 
                         </div>
                     </div>
                     <div className="card card-warning text-center mb-3">
                         <div className="card-block">
-                            <p className="card-text display-1">54</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <p className="display-1">19</p>
+                            <p className="card-text">Loan application received</p>
+                            <p className="card-text"><small className="text-muted">Last updated 1 mins ago</small></p> 
                         </div>
                     </div>
                     <div className="card card-info text-center mb-3">
                         <div className="card-block">
-                            <p className="card-text display-1">10</p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <p className="display-1">0</p>
+                            <p className="card-text">Critical issues</p>
+                            <p className="card-text"><small className="text-muted">Last updated 1 mins ago</small></p> 
                         </div>
                     </div>
                 </div>
@@ -60,9 +63,36 @@ class App extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-sm-12">
+                        <div className="card-group text-right">
+                            <div className="card text-center mb-3">
+                                <div className="card-block">                               
+                                    <p className="display-1">10</p>
+                                    <p className="card-text">Average time/customer (mins)</p>
+                                    <p className="card-text"><small className="text-muted">Last updated 1 mins ago</small></p>                                                               
+                                </div>
+                            </div>
+                            <div className="card text-center mb-3">
+                                <div className="card-block">
+                                    <p className="display-1">7</p>
+                                    <p className="card-text">Number of customers in Queue</p>
+                                    <p className="card-text"><small className="text-muted">Last updated 1 mins ago</small></p>                                 
+                                </div>
+                            </div>
+                            <div className="card text-center mb-3">
+                                <div className="card-block">
+                                    <p className="display-1">6</p>
+                                    <p className="card-text">Average wait time/customer (mins)</p>
+                                    <p className="card-text"><small className="text-muted">Last updated 1 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-12">
                         <div className="card mb-3">
                             <div className="card-header">
-                                Max Traffic
+                                Branch Traffic (Real-Time)
                             </div>
                             <div className="card-block">
                                 <div id="scatter">

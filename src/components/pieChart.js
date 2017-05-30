@@ -6,7 +6,7 @@ class PieChart extends React.Component {
     draw = () => {
         var trace1 = {
             values: [19, 26, 55],
-            labels: ['Residential', 'Non-Residential', 'Utility'],
+            labels: ['Withdrawal', 'Loan', 'Customer Service'],
             type: 'pie'
         };
 

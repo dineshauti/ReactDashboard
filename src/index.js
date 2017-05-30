@@ -53,7 +53,7 @@ class App extends React.Component {
                     <div className="col-sm-6">
                         <div className="card mb-3">
                             <div className="card-header">
-                                Pie Chart
+                                Services
                             </div>
                             <div className="card-block">
                                 <div id="piechart"><PieChart /></div>

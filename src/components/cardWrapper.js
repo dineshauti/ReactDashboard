@@ -1,5 +1,6 @@
 import React from 'react'
 import StatusCard from './statusCard'
+
 var status = [
     {value: 29, message: 'New Accounts Opened', lastUpdated: '1 mins'},
     {value: 19, message: 'Loan Applications Recieved', lastUpdated: '1 mins'},
@@ -13,15 +14,13 @@ function renderCards(cards) {
     })
 }
 
-class CardWrapper extends React.Component {
-    render() {
-        let cards = renderCards(status)
-        return (
-            <div className="card-deck">
-                {cards}
-            </div>
-        )
-    }
+const CardWrapper = () => {
+    let cards = renderCards(status)
+    return (
+        <div className="card-deck">
+            {cards}
+        </div>
+    )
 }
 
 export default CardWrapper
